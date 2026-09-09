@@ -1,5 +1,5 @@
 {
-  "name": "@poojapgeek/history-engine",
+  "name": "immer-history-engine",
   "version": "0.1.0",
   "description": "Framework-agnostic, Immer patch-based undo and redo history.",
   "license": "MIT",
