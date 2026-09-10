@@ -1,11 +1,11 @@
-# @poojapgeek/history-engine
+# immer-patch-history-engine
 
 A framework-agnostic undo/redo manager that records compact [Immer](https://immerjs.github.io/immer/) patches instead of whole-state snapshots. It works with any object state and has no UI or application-domain dependencies.
 
 ## Install
 
 ```bash
-npm install @poojapgeek/history-engine immer
+npm install immer-patch-history-engine immer
 ```
 
 `immer` is a peer dependency so your application owns its version.
@@ -13,7 +13,7 @@ npm install @poojapgeek/history-engine immer
 ## Basic usage
 
 ```ts
-import { HistoryManager } from '@poojapgeek/history-engine';
+import { HistoryManager } from 'immer-patch-history-engine';
 
 type State = { count: number };
 const history = new HistoryManager<State>();
@@ -77,15 +77,7 @@ History entries are plain JSON-serializable patches, though persistence is inten
 ## Development
 
 ```bash
-npm run build -w @poojapgeek/history-engine
-npm run test -w @poojapgeek/history-engine
+npm run build
+npm run test
 ```
 
-Build before opening an example. To serve all three demos locally:
-
-```bash
-npm run build -w @poojapgeek/history-engine
-npx serve packages/history-engine
-```
-
-Then open `examples/todo-app/`, `examples/text-editor/`, or `examples/whiteboard-mini/` from the displayed server URL.
